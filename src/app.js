@@ -46,18 +46,46 @@ function renderPatty() {
 }
 
 function renderCheese() {
+  let patty = document.querySelector("#cheese");
+  //you can also use getElementById
+  if (state.cheese) {
+    cheese.style.display = "inherit";
+  } else {
+    patty.style.display = "none";
+  }
   //Trial 1 - Change the visibility of cheese based on state by manipulating the DOM
 }
 
 function renderTomatoes() {
+  let patty = document.querySelector("#tomato");
+  //you can also use getElementById
+  if (state.tomato) {
+    tomato.style.display = "inherit";
+  } else {
+    tomato.style.display = "none";
+  }
   //Trial 1 - Change the visibility of Tomatoes based on state by manipulating the DOM
 }
 
 function renderOnions() {
+  let patty = document.querySelector("#onion");
+  //you can also use getElementById
+  if (state.onion) {
+    onion.style.display = "inherit";
+  } else {
+    onion.style.display = "none";
+  }
   //Trial 1 - Change the visibility of Onions based on state by manipulating the DOM
 }
 
 function renderLettuce() {
+  let patty = document.querySelector("#lettuce");
+  //you can also use getElementById
+  if (state.lettuce) {
+    lettuce.style.display = "inherit";
+  } else {
+    lettuce.style.display = "none";
+  }
   //Trial 1 - Change the visibility of Lettuce based on state by manipulating the DOM
 }
 
@@ -67,17 +95,29 @@ document.querySelector(".btn-patty").onclick = function () {
 };
 
 // Trial 2 - Setup event listener for the cheese button
-
+document.querySelector(".btn-cheese").onclick = function () {
+  state.cheese = !state.cheese;
+  renderAll();
+};
 
 // Trial 2 - Setup event listener for the tomatoes button
 
-
+document.querySelector(".btn-tomatoes").onclick = function () {
+  state.tomatoes = !state.tomatoes;
+  renderAll();
+};
 // Trial 2 - Setup event listener for the onion button
-
+document.querySelector(".btn-onion").onclick = function () {
+  state.onion = !state.onion;
+  renderAll();
+};
 
 // Trial 2 - Setup event listener for the lettuce button
 
-
+document.querySelector(".btn-lettuce").onclick = function () {
+  state.lettuce = !state.lettuce;
+  renderAll();
+};
 //Challenge 1 - Add/Remove the class active to the buttons based on state
 
 
